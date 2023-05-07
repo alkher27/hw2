@@ -63,7 +63,6 @@ dark_knight_rises["studio_id"] = warner_bros["id"]
 dark_knight_rises.save
 
 #Insert Actor data
-#Batman Begins
 
 bale = Actor.new
 bale["name"] = "Christian Bale"
@@ -109,6 +108,39 @@ levitt.save
 hathaway = Actor.new
 hathaway["name"] = "Anne Hathaway"
 hathaway.save
+
+#Insert Roles data
+
+#pull up movies
+first_movie = Movie.find_by({ "title" => "Batman Begins" })
+second_movie = Movie.find_by({ "title" => "The Dark Knight" })
+third_movie = Movie.find_by({ "title" => "The Dark Knight Rises" })
+
+
+#pull up actors
+cbale = Actor.find_by({ "name" => "Christian Bale" })
+mcaine = Actor.find_by({ "name" => "Michael Caine" })
+lneeson = Actor.find_by({ "name" => "Liam Neeson" })
+kholmes = Actor.find_by({ "name" => "Katie Holmes" })
+goldman = Actor.find_by({ "name" => "Gary Oldman" })
+hledger = Actor.find_by({ "name" => "Heath Ledger" })
+aeckhart = Actor.find_by({ "name" => "Aaron Eckhart" })
+mgyllenhaal = Actor.find_by({ "name" => "Maggie Gyllenhaal" })
+thardy = Actor.find_by({ "name" => "Tom Hardy" })
+glevitt = Actor.find_by({ "name" => "Joseph Gordon-Levitt" })
+ahathaway = Actor.find_by({ "name" => "Anne Hathaway" })
+
+
+#Batman Begins
+batman_begins = Role.new
+batman_begins["movie_id"] = first_movie["id"]
+batman_begins["actor_id"] = cbale["id"]
+batman_begins["character_name"] = "Bruce Wayne"
+batman_begins.save
+
+dark_knight = Role.new
+dark_knight["movie_id"] = second_movie["id"]
+dark_knight.save
 
 # - Query the data and loop through the results to display output similar to the
 #   sample "report" below. (10 points)
