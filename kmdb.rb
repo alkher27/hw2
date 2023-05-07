@@ -33,10 +33,12 @@ Actor.destroy_all
 Role.destroy_all
 Studio.destroy_all
 
+#Insert Studio data
 warner_bros = Studio.new
 warner_bros["name"] = "Warner Bros."
 warner_bros.save
 
+#Insert Movie data
 warner_bros = Studio.find_by({ "name" => "Warner Bros." })
 
 batman_begins = Movie.new
@@ -59,6 +61,54 @@ dark_knight_rises["year_released"] = "2012"
 dark_knight_rises["rated"] = "PG-13"
 dark_knight_rises["studio_id"] = warner_bros["id"]
 dark_knight_rises.save
+
+#Insert Actor data
+#Batman Begins
+
+bale = Actor.new
+bale["name"] = "Christian Bale"
+bale.save
+
+caine = Actor.new
+caine["name"] = "Michael Caine"
+caine.save
+
+neeson = Actor.new
+neeson["name"] = "Liam Neeson"
+neeson.save
+
+holmes = Actor.new
+holmes["name"] = "Katie Holmes"
+holmes.save
+
+oldman = Actor.new
+oldman["name"] = "Gary Oldman"
+oldman.save
+
+ledger = Actor.new
+ledger["name"] = "Heath Ledger"
+ledger.save
+
+eckhart = Actor.new
+eckhart["name"] = "Aaron Eckhart"
+eckhart.save
+
+gyllenhaal = Actor.new
+gyllenhaal["name"] = "Maggie Gyllenhaal"
+gyllenhaal.save
+
+
+hardy = Actor.new
+hardy["name"] = "Tom Hardy"
+hardy.save
+
+levitt = Actor.new
+levitt["name"] = "Joseph Gordon-Levitt"
+levitt.save
+
+hathaway = Actor.new
+hathaway["name"] = "Anne Hathaway"
+hathaway.save
 
 # - Query the data and loop through the results to display output similar to the
 #   sample "report" below. (10 points)
