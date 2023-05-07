@@ -21,12 +21,45 @@
 # 
 # There are three deliverables for this assignment, all delivered within
 # this repository and submitted via GitHub and Canvas:
-# - Generate the models and migration files to match the domain model from hw1.
+# - Generate the models and migration files to match the domain model from hw1. DONE
 #   Table and columns should match the domain model. Execute the migration
-#   files to create the tables in the database. (5 points)
+#   files to create the tables in the database. (5 points) DONE
+
 # - Insert the "Batman" sample data using ruby code. Do not use hard-coded ids.
 #   Delete any existing data beforehand so that each run of this script does not
 #   create duplicate data. (5 points)
+Movie.destroy_all
+Actor.destroy_all
+Role.destroy_all
+Studio.destroy_all
+
+warner_bros = Studio.new
+warner_bros["name"] = "Warner Bros."
+warner_bros.save
+
+warner_bros = Studio.find_by({ "name" => "Warner Bros." })
+
+batman_begins = Movie.new
+batman_begins["title"] = "Batman Begins"
+batman_begins["year_released"] = "2005"
+batman_begins["rated"] = "PG-13"
+batman_begins["studio_id"] = warner_bros["id"]
+batman_begins.save
+
+dark_knight = Movie.new
+dark_knight["title"] = "The Dark Knight"
+dark_knight["year_released"] = "2008"
+dark_knight["rated"] = "PG-13"
+dark_knight["studio_id"] = warner_bros["id"]
+dark_knight.save
+
+dark_knight_rises = Movie.new
+dark_knight_rises["title"] = "The Dark Knight Rises"
+dark_knight_rises["year_released"] = "2012"
+dark_knight_rises["rated"] = "PG-13"
+dark_knight_rises["studio_id"] = warner_bros["id"]
+dark_knight_rises.save
+
 # - Query the data and loop through the results to display output similar to the
 #   sample "report" below. (10 points)
 
