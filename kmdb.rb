@@ -294,7 +294,16 @@ puts "======"
 puts ""
 
 # Query the movies data and loop through the results to display the movies output.
-# TODO!
+
+all_movies = Movie.all
+puts all_movies
+
+for movies in all_movies
+    title = movies["title"]
+    year_released = movies["year_released"]
+    rated = movies["rated"]
+    puts "#{title}       #{year_released}       #{rated}"
+end
 
 # Prints a header for the cast output
 puts ""
