@@ -132,15 +132,110 @@ ahathaway = Actor.find_by({ "name" => "Anne Hathaway" })
 
 
 #Batman Begins
+#add christian bale
 batman_begins = Role.new
 batman_begins["movie_id"] = first_movie["id"]
 batman_begins["actor_id"] = cbale["id"]
 batman_begins["character_name"] = "Bruce Wayne"
 batman_begins.save
+#add michael caine
+batman_begins = Role.new
+batman_begins["movie_id"] = first_movie["id"]
+batman_begins["actor_id"] = mcaine["id"]
+batman_begins["character_name"] = "Alfred"
+batman_begins.save
+#add liam neeson
+batman_begins = Role.new
+batman_begins["movie_id"] = first_movie["id"]
+batman_begins["actor_id"] = lneeson["id"]
+batman_begins["character_name"] = "Ra's Al Ghul"
+batman_begins.save
+#add katie holmes
+batman_begins = Role.new
+batman_begins["movie_id"] = first_movie["id"]
+batman_begins["actor_id"] = kholmes["id"]
+batman_begins["character_name"] = "Rachel Dawes"
+batman_begins.save
 
+#add gary oldman
+batman_begins = Role.new
+batman_begins["movie_id"] = first_movie["id"]
+batman_begins["actor_id"] = goldman["id"]
+batman_begins["character_name"] = "Commissioner Gordon"
+batman_begins.save
+
+#Dark Knight
+#add christian bale
 dark_knight = Role.new
 dark_knight["movie_id"] = second_movie["id"]
+dark_knight["actor_id"] = cbale["id"]
+dark_knight["character_name"] = "Bruce Wayne"
 dark_knight.save
+
+#add michael caine
+dark_knight = Role.new
+dark_knight["movie_id"] = second_movie["id"]
+dark_knight["actor_id"] = mcaine["id"]
+dark_knight["character_name"] = "Alfred"
+dark_knight.save
+
+#add heath ledger
+dark_knight = Role.new
+dark_knight["movie_id"] = second_movie["id"]
+dark_knight["actor_id"] = hledger["id"]
+dark_knight["character_name"] = "Joker"
+dark_knight.save
+
+#add aaron eckhart
+dark_knight = Role.new
+dark_knight["movie_id"] = second_movie["id"]
+dark_knight["actor_id"] = aeckhart["id"]
+dark_knight["character_name"] = "Harvey Dent"
+dark_knight.save
+
+#add maggie gyllenhaal
+dark_knight = Role.new
+dark_knight["movie_id"] = second_movie["id"]
+dark_knight["actor_id"] = mgyllenhaal["id"]
+dark_knight["character_name"] = "Rachel Dawes"
+dark_knight.save
+
+#Dark Knight Rises
+#add christian bale
+dark_knight_rises = Role.new
+dark_knight_rises["movie_id"] = third_movie["id"]
+dark_knight_rises["actor_id"] = cbale["id"]
+dark_knight_rises["character_name"] = "Bruce Wayne"
+dark_knight_rises.save
+
+#add gary oldman
+dark_knight_rises = Role.new
+dark_knight_rises["movie_id"] = third_movie["id"]
+dark_knight_rises["actor_id"] = goldman["id"]
+dark_knight_rises["character_name"] = "Commissioner Gordon"
+dark_knight_rises.save
+
+#add tom hardy
+dark_knight_rises = Role.new
+dark_knight_rises["movie_id"] = third_movie["id"]
+dark_knight_rises["actor_id"] = thardy["id"]
+dark_knight_rises["character_name"] = "Bane"
+dark_knight_rises.save
+
+#add joseph levitt
+dark_knight_rises = Role.new
+dark_knight_rises["movie_id"] = third_movie["id"]
+dark_knight_rises["actor_id"] = levitt["id"]
+dark_knight_rises["character_name"] = "John Blake"
+dark_knight_rises.save
+
+#add anne hathaway
+dark_knight_rises = Role.new
+dark_knight_rises["movie_id"] = third_movie["id"]
+dark_knight_rises["actor_id"] = ahathaway["id"]
+dark_knight_rises["character_name"] = "Selina Kyle"
+dark_knight_rises.save
+
 
 # - Query the data and loop through the results to display output similar to the
 #   sample "report" below. (10 points)
