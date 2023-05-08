@@ -315,7 +315,6 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 all_cast = Role.all
-puts all_cast
 
 for role in all_cast
     movie = Movie.find_by("id" => role.movie_id)
